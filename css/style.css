@@ -1,0 +1,399 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    background-color: #e4e4e4;
+    margin: 0;
+}
+
+a, a:visited, a:active {
+    text-decoration: none;
+    color: #33333399;
+}
+
+li {
+    list-style-type: none;
+}
+
+.header {
+    width: 100%;
+    height: 110px;
+    background-color: #fff159;
+}
+
+.menu {
+    margin-left: 350px;
+}
+
+.menu-izq {
+    width: 12%;
+    height: 100%;
+    float: left;
+}
+
+#logo {
+    margin-top: 20px;
+}
+
+.menu-izq span {
+    font-size: 0.8em;
+}
+
+.buscar {
+    width: 50%;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.buscar input {
+    width: 500px;
+    height: 20px;
+    padding: 7px 60px 9px 15px;
+    border: 0px solid #fff159;
+}
+
+.compra-segura {
+    display: inline-block;
+    position: absolute;
+    right: 370px;
+    top: 9px;
+}
+
+.compra-segura img {
+    max-width: 340px;
+    max-height: 39px;
+}
+
+.botones {
+    float: left;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+.botones a {
+    padding-left: 15px;
+}
+
+.cuenta {
+    float: right;
+    font-size: 14px;
+    margin-right: 400px;
+    margin-top: 25px;
+}
+
+.cuenta a {
+    padding-left: 15px;
+}
+
+.slider-container {
+    position: absolute;
+    left: 50%;
+    top: 280px;
+    transform: translate(-50%, -50%);
+}
+
+#slider {
+    float: left;
+}
+
+.metodos-container {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
+    display: flex;
+    height: 90px;
+    margin: 360px auto;
+    max-width: 1260px;
+    overflow: hidden;
+}
+
+.metodos1 {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.metodo-pago {
+    flex: 1 0 auto;
+    font-size: 18px;
+    padding: 20px;
+    white-space: nowrap;
+    height: 90px;
+}
+
+.metodo-pago a {
+    float: left;
+    margin-right: 16px;
+    width: 48px;
+    height: 54px;
+}
+
+.metodo-titulo {
+    display: inline-block;
+    margin-top: 1px;
+}
+
+.metodo-subtitulo {
+    color: #999;
+    font-size: 14px;
+    margin-top: -1px;
+}
+
+.metodo-subtitulo a {
+    color: #3483fa;
+    text-decoration: none;
+}
+
+.metodos2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ofertas-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    margin-top: -350px;
+    padding: 40px 0;
+}
+
+.ofertas-titulo {
+    margin-bottom: 22px;
+    display: flex;
+    line-height: 1.2;
+    align-items: center;
+}
+
+.ofertas-titulo h2 {
+    font-size: 26px;
+    font-weight: 300;
+    margin: 0 0 0 8px;
+}
+
+.ofertas-titulo a {
+    font-size: 16px;
+    margin-bottom: 2px;
+    align-self: baseline;
+    color: #3483fa;
+    margin: 10px 16px 2px;
+}
+
+.ofertas-container li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.ofertas-img {
+    border-bottom: 1px solid rgb(234 234 234);
+}
+
+.ofertas-contenido {
+    padding-left: 10px;
+    padding-bottom: 5px;
+    background-color: #fff
+}
+
+.beneficios-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    margin-top: -50px;
+    padding: 40px 0;
+}
+
+.ofertas-precio {
+    margin-bottom: -15px;
+}
+
+.ofertas-envio {
+    color: #00a650;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.beneficios-titulo {
+    margin-bottom: 22px;
+    display: flex;
+    line-height: 1.2;
+    align-items: center;
+}
+
+.beneficios-titulo h2 {
+    font-size: 26px;
+    font-weight: 300;
+    margin: 0 0 0 8px;
+}
+
+.beneficios-titulo a {
+    font-size: 16px;
+    margin-bottom: 2px;
+    align-self: baseline;
+    color: #3483fa;
+    margin: 10px 16px 2px;
+}
+
+.beneficios-img img, .beneficios-container img {
+    width: 1240px;
+    border-radius: 10px;
+}
+
+.descubre-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    margin-top: -50px;
+    padding: 40px 0;
+}
+
+.descubre-titulo {
+    margin-bottom: 22px;
+    display: flex;
+    line-height: 1.2;
+    align-items: center;
+}
+
+.descubre-contenido {
+    float: right;
+    margin-right: 20px;
+    width: 610px;
+    background-color: #fff;
+}
+
+.colecciones-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    margin-top: -50px;
+    padding: 40px 0;
+}
+
+.colecciones-titulo {
+    margin-bottom: 22px;
+    display: flex;
+    line-height: 1.2;
+    align-items: center;
+}
+
+.colecciones-container li {
+    margin-right: 25px;
+    float: left;
+}
+
+.colecciones2 {
+    margin-left: 405px;
+    margin-top: -200px;
+}
+
+.categorias-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    margin-top: -50px;
+    padding: 40px 0;
+}
+
+.categorias-titulo {
+    margin-bottom: 22px;
+    display: flex;
+    line-height: 1.2;
+    align-items: center;
+}
+
+.categorias-container li {
+    float: left;
+    width: 170px;
+    height: 170px;
+    background-color: #fff;
+    border: 1px solid #e4e4e4;
+}
+
+.beneficios-cards {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.categorias-container li:hover {
+    background-color: #1e74ff;
+}
+
+.beneficios-cards:hover {
+    color: #fff;
+}
+
+.beneficios-cards img {
+    margin-top: -50px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.datos-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.datos-container li {
+    float: left;
+    width: 400px;
+    height: 350px;
+    background-color: #fff;
+    margin-right: 5px;
+    margin: 0 10px 0 10px;
+}
+
+.datos-container ul {
+    padding-left: 320px;
+}
+
+.datos-titulo {
+    font-size: 22px;
+    font-weight: 900;
+    margin-top: 50px;
+}
+
+.datos-texto {
+    font-size: 16px;
+    text-align: justify;
+}
+
+.datos-cards img {
+    margin-top: 50px;
+}
+
+.footer {
+    background-color: #fff;
+    border-top: 1px solid #e4e4e4;
+}
+
+.footer-container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 320px;
+}
+
+.footer-texto {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.footer-texto-container {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-texto-container a {
+    color: #000;
+}

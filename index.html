@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Libre Chile</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="jquery.infinitecarousel.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#slider').infiniteCarousel({
+                displayTime: 2000, //velocidad de cambio de fotos
+                textholderHeight: 0 //alto de barra transparente para el texto
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            //select all the a tag with name equal to modal
+            $('a[name=modal]').click(function (e) {
+                //Cancel the link behavior
+                e.preventDefault();
+
+                //Get the A tag
+                var id = $(this).attr('href');
+
+                //Get the screen height and width
+                var maskHeight = $(document).height();
+                var maskWidth = $(window).width();
+
+                //Set heigth and width to mask to fill up the whole screen
+                $('#mask').css({
+                    'width': maskWidth,
+                    'height': maskHeight
+                });
+
+                //transition effect		
+                $('#mask').fadeIn(500);
+                $('#mask').fadeTo("normal", 0.8);
+
+                //Get the window height and width
+                var winH = $(window).height();
+                var winW = $(window).width();
+
+                //Set the popup window to center
+                function centrar() {
+                    iz = (screen.width - document.body.clientWidth) / 2;
+                    de = (screen.height - document.body.clientHeight) / 2;
+                    moveTo(iz, de);
+                }
+
+                //transition effect
+                $(id).fadeIn(1000);
+
+            });
+
+            //if close button is clicked
+            $('.window .close').click(function (e) {
+                //Cancel the link behavior
+                e.preventDefault();
+
+                $('#mask').hide();
+                $('.window').hide();
+            });
+
+            //if mask is clicked
+            $('#mask').click(function () {
+                $(this).hide();
+                $('.window').hide();
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="menu">
+                <div class="menu-izq">
+                    <a href="index.html" id="logo">
+                        <img src="img/banner-logo.png" id="logo" alt="Mercado Libre">
+                    </a>
+                    <br>
+                    <a href="index.html">
+                        <span>Ingresa tu</span><br>
+                        <span>ubicación</span>
+                    </a>
+                </div>
+                <div class="buscar">
+                    <input type="text" placeholder="Buscar productos, marcas y más...">
+                </div>
+                <div class="compra-segura">
+                    <img src="img/consejos-compra-segura.webp" alt="Consejos para una compra segura">
+                </div>
+                <div class="botones">
+                    <a href="index.html">Categorías</a>
+                    <a href="index.html">Ofertas</a>
+                    <a href="index.html">Historial</a>
+                    <a href="index.html">Moda</a>
+                    <a href="index.html">Vender</a>
+                    <a href="index.html">Ayuda</a>
+                </div>
+                <div class="cuenta">
+                    <a href="index.html">
+                        <a href="index.html">Crea tu cuenta</a>
+                        <a href="index.html">Ingresa</a>
+                        <a href="index.html">Mis compras</a>
+                        <!-- fas-fa-shoppingcart -->
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="slider-container">
+                <div id="slider">
+                    <ul>
+                        <li>
+                            <img alt='MercadoLibre' src='img/slider1.webp' />
+                        </li>
+                        <li>
+                            <img alt='MercadoLibre' src='img/slider2.webp' />
+                        </li>
+                        <li>
+                            <img alt='MercadoLibre' src='img/slider3.webp' />
+                        </li>
+                        <li>
+                            <img alt='MercadoLibre' src='img/slider4.webp' />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="metodos-container">
+                <div class="metodos1">
+                    <div class="metodo-pago">
+                        <a href="index.html">
+                            <img src="img/tarjeta.svg" alt="Hasta 12 cuotas sin interés">
+                        </a>
+                        <div class="metodo-titulo">
+                            Hasta 12 cuotas sin interés
+                        </div>
+                        <div class="metodo-subtitulo">
+                            <a href="index.html">Ver más</a>
+                        </div>
+                    </div>
+                    <div class="metodo-pago">
+                        <a href="index.html">
+                            <img src="img/tarjeta2.svg" alt="Tarjeta de débito">
+                        </a>
+                        <div class="metodo-titulo">
+                            Tarjeta de débito
+                        </div>
+                        <div class="metodo-subtitulo">
+                            <a href="index.html">Ver más</a>
+                        </div>
+                    </div>
+                    <div class="metodo-pago">
+                        <a href="index.html">
+                            <img src="img/efectivo.svg" alt="Efectivo y transferencia">
+                        </a>
+                        <div class="metodo-titulo">
+                            Efectivo y transferencia
+                        </div>
+                        <div class="metodo-subtitulo">
+                            <a href="index.html">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="metodos2">
+                    <div class="metodo-pago">
+                        <a href="index.html">
+                            <img src="img/mas.svg" alt="Más medios de pago">
+                        </a>
+                        <div class="metodo-titulo">
+                            Más medios de pago
+                        </div>
+                        <div class="metodo-subtitulo">
+                            <a href="index.html">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ofertas-container">
+                <ul>
+                    <div class="ofertas-titulo">
+                        <h2>Ofertas</h2>
+                        <a href="index.html">Ver todas</a>
+                    </div>
+                    <li>
+                        <a href="index.html">
+                            <div class="ofertas-contenido">
+                                <div class="ofertas-img">
+                                    <img src="img/oferta1.webp" alt="Xiaomi Poco M3 Dual Sim 128 Gb">
+                                </div>
+                                <div class="ofertas-precio">
+                                    <h2>$ 210.000</h2>
+                                </div>
+                                <div class="ofertas-cuotas">
+                                    <h5>6x $ 35.000 sin interés</h5>
+                                </div>
+                                <div class="ofertas-envio">
+                                    <h5>Envío gratis</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <div class="ofertas-contenido">
+                                <div class="ofertas-img">
+                                    <img src="img/oferta2.webp" alt="Xiaomi Redmi Note 9 128Gb">
+                                </div>
+                                <div class="ofertas-precio">
+                                    <h2>$ 235.000</h2>
+                                </div>
+                                <div class="ofertas-cuotas">
+                                    <h5>4x $ 58.750 sin interés</h5>
+                                </div>
+                                <div class="ofertas-envio">
+                                    <h5>Envío gratis</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <div class="ofertas-contenido">
+                                <div class="ofertas-img">
+                                    <img src="img/oferta3.webp" alt="Hidrolavadora 100w">
+                                </div>
+                                <div class="ofertas-precio">
+                                    <h2>$ 99.000</h2>
+                                </div>
+                                <div class="ofertas-cuotas">
+                                    <h5>3x $ 33.000 sin interés</h5>
+                                </div>
+                                <div class="ofertas-envio">
+                                    <h5>Envío gratis</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <div class="ofertas-contenido">
+                                <div class="ofertas-img">
+                                    <img src="img/oferta4.webp" alt="Kit Soldadura Profesional">
+                                </div>
+                                <div class="ofertas-precio">
+                                    <h2>$ 120.000</h2>
+                                </div>
+                                <div class="ofertas-cuotas">
+                                    <h5>6x $ 20.000 sin interés</h5>
+                                </div>
+                                <div class="ofertas-envio">
+                                    <h5>Envío gratis</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <div class="ofertas-contenido">
+                                <div class="ofertas-img">
+                                    <img src="img/oferta5.webp" alt="Pantalones Cargo Promocion">
+                                </div>
+                                <div class="ofertas-precio">
+                                    <h2>$ 29.990</h2>
+                                </div>
+                                <div class="ofertas-cuotas">
+                                    <h5>3x $ 9.997 sin interés</h5>
+                                </div>
+                                <div class="ofertas-envio">
+                                    <h5>Envío gratis</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="beneficios-container">
+                <ul>
+                    <div class="beneficios-titulo">
+                        <h2>Beneficios de Mercado Puntos</h2>
+                        <a href="index.html">Ver todos los beneficios</a>
+                    </div>
+                    <li>
+                        <div class="beneficios-contenido">
+                            <div class="beneficios-img">
+                                <a href="index.html">
+                                    <img src="img/beneficios.png" alt="Beneficios con Mercado Puntos">
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <a href="index.html">
+                        <li>
+                            <img src="img/anuncio.jfif" alt="Anuncio">
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <div class="descubre-container">
+                <ul>
+                    <div class="descubre-titulo">
+                        <h2>Descubre</h2>
+                    </div>
+                    <li>
+                        <div class="descubre-contenido">
+                            <div class="descubre-img">
+                                <a href="index.html">
+                                    <img src="img/descubre1.png" alt="Beneficios con Mercado Puntos">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="descubre-contenido">
+                            <div class="descubre-img">
+                                <a href="index.html">
+                                    <img src="img/descubre2.png" alt="Beneficios con Mercado Puntos">
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="colecciones-container">
+                <ul>
+                    <div class="colecciones-titulo">
+                        <h2>Colecciones:</h2><b>Supermercado</b>
+                    </div>
+                    <li>
+                        <a href="index.html">
+                            <div class="colecciones-contenido">
+                                <div class="colecciones-img">
+                                    <img src="img/colecciones1.png" alt="Colecciones">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <div class="colecciones-contenido">
+                                <div class="colecciones-img">
+                                    <img src="img/colecciones2.png" alt="Colecciones">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <div class="colecciones-contenido">
+                                <div class="colecciones-img">
+                                    <img src="img/colecciones3.png" alt="Colecciones">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <div class="colecciones-contenido">
+                                <div class="colecciones-img">
+                                    <img src="img/colecciones4.png" alt="Colecciones">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <div class="colecciones-contenido">
+                                <div class="colecciones-img">
+                                    <img src="img/colecciones5.png" alt="Colecciones">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="colecciones2">
+                    <li>
+                        <a href="index.html">
+                            <div class="colecciones-contenido">
+                                <div class="colecciones-img">
+                                    <img src="img/colecciones6.png" alt="Colecciones">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <div class="colecciones-contenido">
+                                <div class="colecciones-img">
+                                    <img src="img/colecciones7.png" alt="Colecciones">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <div class="colecciones-contenido">
+                                <div class="colecciones-img">
+                                    <img src="img/colecciones8.png" alt="Colecciones">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <div class="colecciones-contenido">
+                                <div class="colecciones-img">
+                                    <img src="img/colecciones9.png" alt="Colecciones">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="categorias-container">
+                <ul>
+                    <div class="categorias-titulo">
+                        <h2>Categorías populares</h2>
+                    </div>
+                    <li>
+                        <div class="categorias-contenido">
+                            <a href="index.html">
+                                <div class="beneficios-cards">
+                                    <img src="img/categorias-2.svg" alt="Autos, Motos y Otros">
+                                    <br>
+                                    Autos, Motos y Otros
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="categorias-contenido">
+                            <a href="index.html">
+                                <div class="beneficios-cards">
+                                    <img src="img/categorias-4.svg" alt="Cámaras y Accesorios">
+                                    <br>
+                                    Cámaras y Accesorios
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="categorias-contenido">
+                            <a href="index.html">
+                                <div class="beneficios-cards">
+                                    <img src="img/categorias-6.svg" alt="Consolas y Videojuegos">
+                                    <br>
+                                    Consolas y Videojuegos
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="categorias-contenido">
+                            <a href="index.html">
+                                <div class="beneficios-cards">
+                                    <img src="img/categorias-8.svg" alt="Electrodomésticos">
+                                    <br>
+                                    Electrodomésticos
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="categorias-contenido">
+                            <a href="index.html">
+                                <div class="beneficios-cards">
+                                    <img src="img/categorias-10.svg" alt="Hogar y Muebles">
+                                    <br>
+                                    Hogar y Muebles
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="categorias-contenido">
+                            <a href="index.html">
+                                <div class="beneficios-cards">
+                                    <img src="img/categorias-12.svg" alt="Vestuario y Calzado">
+                                    <br>
+                                    Vestuario y Calzado
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="categorias-contenido">
+                            <a href="index.html">
+                                <div class="beneficios-cards">
+                                    <img src="img/categorias-14.svg" alt="Belleza y Cuidado Personal">
+                                    <br>
+                                    Belleza y Cuidado Personal
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="categorias-contenido">
+                            <a href="index.html">
+                                <div class="beneficios-cards">
+                                    <img src="img/categorias-3.svg" alt="Celulares y Telefonía">
+                                    <br>
+                                    Celulares y Telefonía
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="categorias-contenido">
+                            <a href="index.html">
+                                <div class="beneficios-cards">
+                                    <img src="img/categorias-5.svg" alt="Computación">
+                                    <br>
+                                    Computación
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="categorias-contenido">
+                            <a href="index.html">
+                                <div class="beneficios-cards">
+                                    <img src="img/categorias-7.svg" alt="Electrónica, Audio y Video">
+                                    <br>
+                                    Electrónica, Audio y Video
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="categorias-contenido">
+                            <a href="index.html">
+                                <div class="beneficios-cards">
+                                    <img src="img/categorias-9.svg" alt="Accesorios para Vehículos">
+                                    <br>
+                                    Accesorios para Vehículos
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="categorias-contenido">
+                            <a href="index.html">
+                                <div class="beneficios-cards">
+                                    <img src="img/categorias-11.svg" alt="Deportes y Fitness">
+                                    <br>
+                                    Deportes y Fitness
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="categorias-contenido">
+                            <a href="index.html">
+                                <div class="beneficios-cards">
+                                    <img src="img/categorias-13.svg" alt="Juegos y Juguetes">
+                                    <br>
+                                    Juegos y Juguetes
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="categorias-contenido">
+                            <a href="index.html">
+                                <div class="beneficios-cards">
+                                    <img src="img/categorias-1.svg" alt="Bebés">
+                                    <br>
+                                    Bebés
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="datos-container">
+                <ul>
+                    <center>
+                        <li>
+                            <div class="datos-contenido">
+                                <a href="index.html">
+                                    <div class="datos-cards">
+                                        <img src="img/payment.svg" alt="Elige cómo pagar">
+                                        <br>
+                                        <div class="datos-titulo">
+                                            Elige cómo pagar
+                                        </div>
+                                        <br>
+                                        <div class="datos-texto">
+                                            Con Mercado Pago, paga con tus tarjetas de débito y crédito o hazlo con
+                                            efectivo
+                                            en puntos de pago. Paga siempre desde
+                                            Mercado Libre para que podamos asegurar tu dinero.
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="datos-contenido">
+                                <a href="index.html">
+                                    <div class="datos-cards">
+                                        <img src="img/shipping.svg" alt="Envío gratis desde $ 19.990">
+                                        <br>
+                                        <div class="datos-titulo">
+                                            Envío gratis desde $ 19.990
+                                        </div>
+                                        <br>
+                                        <div class="datos-texto">
+                                            Con solo estar registrado en Mercado Libre, tienes envíos gratis en millones
+                                            de
+                                            productos seleccionados.
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="datos-contenido">
+                                <a href="index.html">
+                                    <div class="datos-cards">
+                                        <img src="img/protected.svg" alt="Compra Protegida">
+                                        <br>
+                                        <div class="datos-titulo">
+                                            Compra Protegida
+                                        </div>
+                                        <br>
+                                        <div class="datos-texto">
+                                            Completa tus compras en Mercado Libre para que estén siempre protegidas. Si
+                                            el
+                                            producto no es lo que esperabas o no
+                                            llega, te devolvemos tu dinero.
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    </center>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footer-texto">
+                    <div class="footer-texto-container">
+                        <a href="index.html">
+                            <b>Trabaja con nosotros</b>
+                        </a>
+                    </div>
+                    <div class="footer-texto-container">
+                        <a href="index.html">
+                            <b>Términos y condiciones</b>
+                        </a>
+                    </div>
+                    <div class="footer-texto-container">
+                        <a href="index.html">
+                            <b>Cómo cuidamos tu privacidad</b>
+                        </a>
+                    </div>
+                    <div class="footer-texto-container">
+                        <a href="index.html">
+                            <b>Ayuda</b>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-texto">
+                    <div class="copy-footer">
+                        Copyright &copy; 1999-2021 MercadoLibre Chile Ltda.
+                    </div>
+                </div>
+                <div class="footer-texto">
+                    <div class="dire-footer">
+                        Av. Apoquindo 4800, Torre 2, piso 21, Las Condes, Santiago - Chile.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
